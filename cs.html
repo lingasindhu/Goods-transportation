@@ -1,0 +1,236 @@
+<html>
+<head>
+<title>BOOKING</title>
+
+<style>
+body
+{
+ background-image: linear-gradient(rgba(1,0,0,0.3),rgba(1,0,0,0.3)),url("cd.jpg"); 
+ margin: 0;
+ padding: 0;
+ background-repeat:no-repeat;
+   background-size:cover;
+}
+.book
+{
+ background:transparent;
+max-width: 600px;
+margin: 20px auto;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ h1 {
+      text-align: center;
+      color:white ;
+}
+form
+ {
+      display: grid;
+      grid-gap: 10px;
+ }
+ label
+ { 
+   color:white;
+      font-weight: bold;
+ }
+ input, select
+ {
+      width: 100%;
+      padding: 8px;
+      color:white;
+      box-sizing: border-box;
+      background:transparent;
+    }
+.button
+{
+      background-color:grey;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+border-style:solid;
+ }
+ .button:hover
+ {
+      background-color: green;
+    }
+.button1
+{
+background-color:grey;
+ color:black;
+ padding:10px;
+ border:none;
+cursor:pointer;
+border-radius:5px;
+border-style:solid;
+}
+.button1:hover
+ {
+      background-color: green;
+    }
+option
+{
+background-color:black;
+}
+.down
+{
+background: black;
+bottom:0;
+width:100%;
+color:#fff;
+padding:100px 0 30px;
+
+font-size:13px;
+line-height:20px;
+}
+.row
+{
+width:85%;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+align-items:flex-start;
+justify-content:space-between;
+}
+.col
+{
+ flex-basis:25%;
+padding:10px;
+}
+.col:nth-child(2),.col:nth-child(3)
+{
+flex-basis:15px;
+}
+.logo
+{
+  width:80px;
+margin-bottom:30px;
+}
+ .col h3
+{
+ width:fit-content;
+  margin-bottom:40px;
+ position:relative;
+}
+.email-id
+{
+ width:fit-content;
+ border-bottom:1px solid #ccc;
+margin:20px p;
+cursor:pointer;
+}
+ul li
+{
+ list-style:none;
+ margin-bottom:12px;
+}
+ul li a
+{ 
+text-decoration:none;
+color:white;
+}
+.social .fab
+{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  text-align:center;
+  line-height:40px;
+   font-size:20px;
+  color:white;
+  background:black;
+ margin-right:15px;
+ cursor:pointer;
+}
+</style>
+<body>
+<section>
+<div class="book">
+<h1 align="center">Transportation Booking</h1>
+
+<form action="finalbooking1.jsp" method="POST">
+<label for="Name">Name:</label>
+<input type="text" id="Name" name="Name" required>
+<label for="e-mail">E-mail:</label>
+<input type="text" id="email" name="email" required>
+<label for="pickup-location">pickup-Location:</label>
+<select id="pickup" name="pickup" required>
+<option>Hyderabad </option>
+<option>Vijayawada </option>
+<option>Chennai</option>
+<option>Mumbai </option>
+</select>
+
+<label for="delivery-Location">Delivery-location:</label>
+<select id="delivery" name="delivery" required>
+<option>Chandigarh</option>
+<option>Lucknow</option>
+<option>Jaipur</option>
+<option>Shimla</option>
+</select>
+
+
+
+<label for="Goods-Type">Goods-Type:</label>
+<select id="goodsType" name="goodsType" required>
+<option value="select">select</option>
+ <option value="delicate">delicate</option>
+<option value="standard">Standard</option>
+<option value="heavy">Heavy</option>
+</select>
+<label for="kgs">No.of.kgs:</label>
+<input type="number" id="kgs" name="kgs" required>
+
+<label for="pickupDate">Pickup-Date:</label>
+ <input type="date" id="pickupDate" name="pickupDate" required>
+<input type="submit"  value="Book transportation" class="button" >
+</form> 
+</div>
+<div class="book">
+<form>
+<h1>Track Your Shippment</h1>
+<label for="trackyourorder">Track Your Order:</label>
+<input type="text" id="trackyourorder" name="Track Your Order" placeholder="enter your order number"  pattern="[0-9]{10}" required>
+<input type="submit"  value="Track" class="button1">
+</form>
+</div>
+</section>
+<section class="s4">
+<div class="down">
+  <div class="row">
+   <div class="col">
+   <img src="C:\\Users\\sindh\\OneDrive\\Desktop\\logo.png" class="logo">
+     <h1> Goods Tranportation </h1>
+  </div>
+    <div class="col">
+    <h3>office</h3>
+     <p>MG Road</p>
+     <p>Vijayawada</p>
+     <p>Andhra Pradesh,PIN 502355,India</p>
+    <p class="email-id">goodstransportation@gmail.com</p>
+     <h4>+91-9876543210</h4>
+    </div>
+    <div class="col">
+    <h3>Links</h3>
+    <ul>
+     <li><a href="main.html">Home</a></li>
+     <li><a href="about.html">About Us</a></li>
+     <li><a href="contact.html">ContactUs</a></li>
+     <li><a href="login.html">Login</a></li>
+     <li><a href="register2.html">Register</a></li>
+</ul>
+     </div>
+     <div class="social">
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-whatsapp"></i>
+    <i class="fab fa-pinterest"></i>
+   </div>
+</div>
+</div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+*
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.back{
+  background-image: linear-gradient(rgba(1,0,0,0.3),rgba(1,0,0,0.3)),url("bg4.jpg");
+    background-repeat:no-repeat;
+   background-size:cover;
+height:100vh;
+
+}
+.banner
+{
+  width:100%;
+  position:absolute;
+  top:50%;
+color:white;
+transform:translatey(-50%);
+ text-align:center;
+font-size:30px;
+
+}
+
+.bar
+{
+ text-align:center;
+}
+.bar ul
+{
+   display:inline-flex;
+   list-style:none;
+   color:white;
+}
+.bar ul li
+{
+  width:120px;
+  margin:15px;
+  padding:15px;
+position:relative;
+margin-right:50px;
+}
+.bar ul li a
+{
+  text-decoration:none;
+  color:white;
+}
+.bar ul li::after
+{
+content: '';
+height: 3px;
+width: 0;
+background: lime;
+position:absolute;
+left:0;
+bottom:-10px;
+transition:0.5s;
+}
+.bar ul li:hover::after
+{
+  width:100%;
+  color:black;
+ }
+
+.bar ul li:hover
+{
+ background-color:black;
+}
+.scroll
+{
+width:80%; 
+margin:auto;
+text-align:center;
+padding-top:50px;
+}
+h1
+{
+  font-size:36px;
+  font-weight:600;
+}
+.ad 
+{
+ padding: 20px;
+
+}
+.ad h2
+{
+ text-indent:200px;
+margin-bottom: 25px;
+}
+.ad ul {
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+.ad ul li {
+    font-size: 16px;
+    margin-bottom: 25px;
+     text-indent:200px;
+}
+
+
+
+ .at {
+    max-width: 800px;
+    margin-left:200px;
+     font-size: 18px;
+    background-color: #fff;
+    border-radius: 0px;
+    
+}
+
+
+
+.branches
+{
+  width:80%; 
+margin:auto;
+text-align:center;
+padding-top:50px;
+}
+.bran
+{
+ display:inline-flex;
+  height:100px;
+margin: 50px;
+justify-content:center;
+gap:40px;
+padding-bottom:50px;
+}
+.down
+{
+background: linear-gradient(to right,#00039c,#2d0b00);
+bottom:0;
+width:100%;
+color:#fff;
+padding:100px 0 30px;
+border-top-left-radius:125px;
+font-size:13px;
+line-height:20px;
+}
+.row
+{
+width:85%;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+align-items:flex-start;
+justify-content:space-between;
+}
+.col
+{
+ flex-basis:25%;
+padding:10px;
+}
+.col:nth-child(2),.col:nth-child(3)
+{
+flex-basis:15px;
+}
+.logo
+{
+  width:80px;
+margin-bottom:30px;
+}
+ .col h3
+{
+ width:fit-content;
+  margin-bottom:40px;
+ position:relative;
+}
+.email-id
+{
+ width:fit-content;
+ border-bottom:1px solid #ccc;
+margin:20px p;
+cursor:pointer;
+}
+ul li
+{
+ list-style:none;
+ margin-bottom:12px;
+}
+ul li a
+{ 
+text-decoration:none;
+color:white;
+}
+.social .fab
+{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  text-align:center;
+  line-height:40px;
+   font-size:20px;
+  color:#000;
+  background:#fff;
+ margin-right:15px;
+ cursor:pointer;
+}

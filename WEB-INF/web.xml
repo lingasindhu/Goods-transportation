@@ -1,0 +1,103 @@
+<web-app>
+<welcome-file-list> 
+      <welcome-file>main.html</welcome-file>
+</welcome-file-list>
+<servlet>
+      <servlet-name>First</servlet-name>
+      <servlet-class>login</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>First</servlet-name>  
+        <url-pattern>/valid</url-pattern>
+</servlet-mapping>
+<servlet>
+      <servlet-name>Second</servlet-name>
+      <servlet-class>success</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Second</servlet-name>  
+        <url-pattern>/success</url-pattern>
+</servlet-mapping>
+<servlet>
+      <servlet-name>Four</servlet-name>
+      <servlet-class>registermy</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Four</servlet-name>  
+        <url-pattern>/register</url-pattern>
+</servlet-mapping>
+<servlet>
+      <servlet-name>Five</servlet-name>
+      <servlet-class>login2</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Five</servlet-name>  
+        <url-pattern>/valid2</url-pattern>
+</servlet-mapping>
+<servlet>
+      <servlet-name>Six</servlet-name>
+      <servlet-class>success2</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Six</servlet-name>  
+        <url-pattern>/success2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+      <servlet-name>Seven</servlet-name>
+      <servlet-class>contactt</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Seven</servlet-name>  
+        <url-pattern>/contactt</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+      <servlet-name>eight</servlet-name>
+      <servlet-class>bookingb</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>eight</servlet-name>  
+        <url-pattern>/bookb</url-pattern>
+</servlet-mapping>
+
+<servlet>
+      <servlet-name>nine</servlet-name>
+      <servlet-class>bookingmumbai</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>nine</servlet-name>  
+        <url-pattern>/bookm</url-pattern>
+</servlet-mapping>
+
+<servlet>
+      <servlet-name>ten</servlet-name>
+      <servlet-class>bookinghyderabad</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ten</servlet-name>  
+        <url-pattern>/bookh</url-pattern>
+</servlet-mapping>
+
+<servlet>
+      <servlet-name>eleven</servlet-name>
+      <servlet-class>bookingdelhi</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>eleven</servlet-name>  
+        <url-pattern>/bookd</url-pattern>
+</servlet-mapping>
+
+<servlet>
+      <servlet-name>twelve</servlet-name>
+      <servlet-class>bookinggujarat</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>twelve</servlet-name>  
+        <url-pattern>/bookg</url-pattern>
+</servlet-mapping>
+
+
+
+</web-app>
