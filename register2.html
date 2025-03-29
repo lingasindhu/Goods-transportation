@@ -1,104 +1,145 @@
 <html>
 <head>
-<title>register form</title>
-<script>
-function verif()
-{
- var pas=document.getElementById("password").value;
- var conpas=document.getElementById("confirmpassword").value;
- if(pas!=conpas)
-{
-   alert("passwords incorrect");
-}
- if(pas=='')
-{
-   alert("please fill all details");
-}
-if(pas==conpas &&pas!=conpas)
- {
-   alert("registration successful");
-  }
+    <title>Register Form</title>
+    <script>
+        function verif() {
+            var pas = document.getElementById("password").value;
+            var conpas = document.getElementById("confirmpassword").value;
 
-}
-</script>
+            if (pas === '') {
+                alert("Please fill all details");
+                return false; // Prevent form submission
+            }
+            if (pas !== conpas) {
+                alert("Passwords do not match");
+                return false; // Prevent form submission
+            }
+            if (pas === conpas && pas !== '') {
+                alert("Registration successful");
+                return true; // Allow form submission
+            }
+            return false; // Default case
+        }
+    </script>
 
-<style>
-form
-{
-display:grid;
-grid-gap:5px;
-}
-body
-{
- margin: 0;
- padding:0;
- background-image: linear-gradient(rgba(1,0,0,0.2),rgba(1,0,0,0.2)),url("rbg2.jpg"); 
- background-repeat:no-repeat;
- background-size:cover;
-}
-h2 {
-      text-align: center;
-      color:black ;
-}
-.main
-{
- background-color:white;
-max-width: 300px;
-margin: 20px auto;
-padding: 30px 40px;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-}
-label
- {    
-      color:black;
-      font-weight: bold;
- }
-input
- {
-      width: 100%;
-      padding: 5px;
-      box-sizing: border-box;
-    color:black;
-   
-    }
-.button
-{
-padding:10px;
-color:black;
- border:none;
-cursor:pointer;
-border-radius:5px;
-border-style:solid;
-}
-.button:hover
- {
-      background-color: aqua;
-    }
-</style>
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("rbg2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            background-color: white;
+            max-width: 350px;
+            width: 100%;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        form {
+            display: grid;
+            grid-gap: 10px;
+        }
+
+        label {
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .gender-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #00cccc; /* A brighter aqua-like color */
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+    </style>
 </head>
 <body>
-<div class="main">
-<form action="register" method="POST">
-<h1 align="center">Register</h1>   
-<label for="username">Username:</label>
-<input  type="text" id="name" name="name" placeholder="Enter your username" pattern="^[A-Z][a-zA-Z0-9]*{10}"  required>
-<label for="email">E-mail:</label>
-<input type="email" id="email" name="email" placeholder="Example@gmail.com" required>
-<label for="phonenumber">Phone Number:</label>
-<input type="text" name="phonenumber" id="phonenumber" placeholder="enter your phone number" required maxlength="10">
-
-<label for="password">Password:</label>
-<input  type="password" id="password" name="password" placeholder="enter your password" pattern="[a-zA-Z0-9]*{7}" maxlength="7" required>
-<label for="confirmpassword"> Confirm Password:</label>
-<input  type="password" id="confirmpassword" name="confirmpassword" placeholder="confirm your password"  required>
-<label for="gender">Gender:</label>
-<input type="radio" name="gender" value="Male">Male
-<input type="radio" name="gender" value="Female">Female
-<input type="radio" name="gender" value="Other">Other
-<input  type="submit" value="Regsiter" class="button" onclick="verif()" >
-</form>
-</div>
+    <div class="main">
+        <form action="register" method="POST" onsubmit="return verif()">
+            <h1>Register</h1>   
+            <label for="username">Username:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your username" pattern="[A-Z][a-zA-Z0-9]*" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            
+            <label for="phonenumber">Phone Number:</label>
+            <input type="text" name="phonenumber" id="phonenumber" placeholder="Enter your phone number" pattern="[0-9]{10}" maxlength="10" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" pattern="[a-zA-Z0-9]{7,}" maxlength="15" required>
+            
+            <label for="confirmpassword">Confirm Password:</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" required>
+            
+            <label for="gender">Gender:</label>
+            <div class="gender-group">
+                <input type="radio" name="gender" value="Male" id="male" required><label for="male">Male</label>
+                <input type="radio" name="gender" value="Female" id="female"><label for="female">Female</label>
+                <input type="radio" name="gender" value="Other" id="other"><label for="other">Other</label>
+            </div>
+            
+            <input type="submit" value="Register" class="button">
+        </form>
+    </div>
 </body>
 </html>
