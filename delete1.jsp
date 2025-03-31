@@ -173,7 +173,7 @@
             </div>
         <% } %>
         
-        <a href="main.html" class="button">Return to Home</a>
+        <a href="main2.jsp" class="button">Return to Home</a>
     </div>
 </body>
 </html>
